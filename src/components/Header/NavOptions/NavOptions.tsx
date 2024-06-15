@@ -6,6 +6,10 @@ interface Props {
   smallDevice: boolean;
 };
 
+//crie uma função que identifique em qual path estou e coloquei nele uma classe active
+
+const path = window.location.pathname;
+
 export const NavOptions = ({smallDevice}: Props) => {
   return (
    <S.StyledNav>
@@ -13,7 +17,9 @@ export const NavOptions = ({smallDevice}: Props) => {
     {
       NavRoutes.map(route => (
         <li key={route.name}>
-          <a href = {route.path}>{route.name}</a>
+          <a href = {route.path} className={
+            path === route.path ? 'active' : ''
+          }>{route.name}</a>
         </li>
       ))
     }

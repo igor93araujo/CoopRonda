@@ -1,25 +1,40 @@
 import React from 'react'
 import * as S from './styles';
-import { NavRoutes } from '@/utils/NavRoutes';
+import { ComponentsData } from '@/utils/ComponentsData';
 
 interface Props {
   smallDevice: boolean;
+  onNavigate: (pageId: string) => void;
+  activePage: string;
+  setOpenDrawer?: (open: boolean) => void;
 };
 
-//crie uma função que identifique em qual path estou e coloquei nele uma classe active
+type RouteType = {
+  name: string;
+  path: string;
+}
 
-const path = window.location.pathname;
+export const NavOptions = ({smallDevice, onNavigate, activePage, setOpenDrawer}: Props) => {
+  
+  const handleNavigationClick = (route: RouteType) => {
+    if (setOpenDrawer) {
+      onNavigate(route.path);
+      setOpenDrawer(false);
+      return;
+    }
+    onNavigate(route.path);
+  }
 
-export const NavOptions = ({smallDevice}: Props) => {
   return (
    <S.StyledNav>
     <ul className={smallDevice ? 'smallDevice' : ''}>
     {
-      NavRoutes.map(route => (
-        <li key={route.name}>
-          <a href = {route.path} className={
-            path === route.path ? 'active' : ''
-          }>{route.name}</a>
+      ComponentsData.map(data => (
+        <li key={data.name}>
+          <a
+            onClick={() => handleNavigationClick(data)}
+            className={activePage === data.path ? 'active' : ''}
+          >{data.name}</a>
         </li>
       ))
     }

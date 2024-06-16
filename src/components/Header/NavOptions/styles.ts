@@ -16,6 +16,7 @@ export const StyledNav = styled.nav`
           color: #565448;
           position: relative;
           font-size: 20px;
+          cursor: pointer;
 
         }
         .active {

@@ -7,8 +7,13 @@ import { useState } from 'react';
 import { NavOptions } from '../NavOptions/NavOptions';
 
 const drawerWidth = 200;
+interface Props {
+  onNavigate: (pageId: string) => void;
+  activePage: string;
+}
 
-export const ResponsiveDrawer = () =>  {
+
+export const ResponsiveDrawer = ({onNavigate, activePage}: Props) =>  {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
   return (
@@ -36,7 +41,7 @@ export const ResponsiveDrawer = () =>  {
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
           >
-        <NavOptions smallDevice={true}/>
+        <NavOptions onNavigate={onNavigate} smallDevice={true} activePage={activePage} setOpenDrawer={setOpenDrawer}/>
       </Drawer>
     </>
   );

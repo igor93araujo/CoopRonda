@@ -6,7 +6,12 @@ import Typography from '@mui/material/Typography';
 import { ResponsiveDrawer } from './ResponsiveDrawer';
 import { NavOptions } from './NavOptions/NavOptions';
 
-export const Header = () => {
+interface Props {
+  onNavigate: (pageId: string) => void;
+  activePage: string;
+}
+
+export const Header = ({onNavigate, activePage}: Props) => {
 
   const [screenSize, setScreenSize] = useState(window.innerWidth);
   const handleResize = () => {
@@ -22,9 +27,9 @@ export const Header = () => {
     <Typography variant='h5'>CoopRonda</Typography>
     {
       smallDevice ? (
-        <ResponsiveDrawer />
+        <ResponsiveDrawer onNavigate={onNavigate} activePage={activePage}/>
       ) : (
-        <NavOptions smallDevice={false}/>
+        <NavOptions onNavigate={onNavigate} smallDevice={false} activePage={activePage}/>
       )
     }
         </S.StyledBox>

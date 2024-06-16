@@ -1,6 +1,5 @@
 export const NavRoutes = [
- { name: 'Home', path: '/' },
- { name: 'Principal', path: '/main' },
+ { name: 'Principal', path: '/' },
  { name: 'Contato', path: '/contact' },
  { name: 'Diretoria', path: '/directory' },
  { name: 'Proposta', path: '/purpose' },

@@ -17,7 +17,7 @@ export const ResponsiveDrawer = () =>  {
       color="inherit"
       aria-label="open drawer"
       edge="end"
-      size='small'
+      size='large'
       onClick={() => setOpenDrawer(true)}
       sx={{ mr: 2, display: { sm: 'none' } }}
      >
@@ -30,7 +30,7 @@ export const ResponsiveDrawer = () =>  {
         ModalProps={{
           keepMounted: true,
         }}
-        anchor="right" // Adicionado para mover o drawer para o lado direito
+        anchor="right"
         sx={{
           display: { xs: 'block', sm: 'none' },
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },

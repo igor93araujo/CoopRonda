@@ -1,9 +1,10 @@
+import { MainPage } from '@/templates/MainPage';
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <p>this is the home</p>
+      <MainPage />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import ContactsPage from '@/templates/ContactsPage/ContactsPage';
+import ContactsPage from '@/templates/Contacts/Contacts';
 
 export default function Contact() {
   return (

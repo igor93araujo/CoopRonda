@@ -4,5 +4,5 @@ export const ComponentsData = [
  { name: 'Diretoria', path: 'directory' },
  { name: 'Proposta', path: 'purpose' },
  { name: 'Rondas', path: 'rounds' },
- { name: 'Restrito', path: 'restrict' },
+ { name: 'Restrito', path: 'restricted' },
 ]

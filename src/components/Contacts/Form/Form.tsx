@@ -52,6 +52,8 @@ export default function Form() {
 
  const handleSendForm = async () => {
 
+  alert('Formulário enviado com sucesso!');
+
   // try {
   //  const response = await fetch('/api/send-email', {
   //   method: 'POST',

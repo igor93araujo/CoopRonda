@@ -4,7 +4,11 @@ import { Main } from '@/templates/Main';
 import styles from "./page.module.css";
 import { Header } from '@/components/Header';
 import { useState } from 'react';
-import ContactsPage from '@/templates/Contacts/Contacts';
+import Contacts from '@/templates/Contacts/Contacts';
+import Purposes from '@/templates/Purposes/Purposes';
+import Rounds from '@/templates/Rounds/Rounds';
+import Restricted from '@/templates/Restricted/Restricted';
+
 
 export default function Home() {
 
@@ -18,10 +22,14 @@ export default function Home() {
     switch (activePage) {
       case 'home':
         return <Main />;
-        break;
       case 'contact':
-        return <ContactsPage />;
-        break;
+        return <Contacts />;
+      case 'purpose':
+        return <Purposes />;
+      case 'rounds':
+        return <Rounds />;
+      case 'restricted':
+        return <Restricted />;
       default:
         return <Main />;
     }

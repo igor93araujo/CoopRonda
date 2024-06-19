@@ -22,6 +22,14 @@ export default function Form() {
    validateForm();
   }
 
+  if (name === 'phone') {
+   const phone = value.replace(/\D/g, '');
+   if (phone.length > 11) {
+    return;
+   }
+   setFormData({ ...formData, [name]: phone });
+  }
+
   if (Object.values(formData).every((value) => value !== '')) {
    setFieldsFilled(false);
    return;

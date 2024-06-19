@@ -8,7 +8,8 @@ import Adress from '@/components/Contacts/Adress/Adress'
 import Form from '@/components/Contacts/Form/Form'
 
 
-export default function Contacts() {
+
+const Contacts = () => {
 
   return (
     <PageWrapper>
@@ -21,3 +22,5 @@ export default function Contacts() {
     </PageWrapper>
   )
 }
+
+export default Contacts

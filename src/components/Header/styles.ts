@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Box } from '@mui/material';
-import styled from 'styled-components';
+import { Box } from "@mui/material";
+import styled from "styled-components";
 
 export const StyledBox = styled(Box)`
   background-color: #f2f26f;
@@ -12,7 +12,7 @@ export const StyledBox = styled(Box)`
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 70px;

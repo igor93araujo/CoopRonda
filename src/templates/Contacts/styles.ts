@@ -1,5 +1,5 @@
-import { Box } from '@mui/material';
-import styled from 'styled-components';
+import { Box } from "@mui/material";
+import styled from "styled-components";
 
 export const PageWrapper = styled.section`
   width: 100%;
@@ -22,18 +22,18 @@ export const ContactsWrapper = styled(Box)`
     align-items: flex-start;
   }
 
- .map {
+  .map {
     width: 500px;
     height: 500px;
     z-index: -1;
-    
+
     @media (max-width: 600px) {
       width: 100%;
       height: 300px;
     }
   }
 
- .adressInfo {
+  .adressInfo {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -43,7 +43,6 @@ export const ContactsWrapper = styled(Box)`
       width: 100%;
     }
   }
-
 
   .form {
     display: flex;
@@ -61,5 +60,4 @@ export const ContactsWrapper = styled(Box)`
       }
     }
   }
-
 `;

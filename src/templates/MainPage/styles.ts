@@ -27,6 +27,15 @@ export const PageWrapper = styled.section`
    font-weight: 400;
  }
 
+ .regionsSearch {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 10px;
+  margin-bottom: 20px;
+ }
+
  .regions {
     padding: 0 20px;
   }

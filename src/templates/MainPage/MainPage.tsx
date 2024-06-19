@@ -31,21 +31,23 @@ export const MainPage = () => {
         CONTRATAÇÃO E CANCELAMENTO DIRETAMENTE COM O PRÓPRIO ZELADOR DE 22:00 às 05:00.
       </strong>
 
-      <Typography variant='h6' sx={{ alignSelf: 'center' }}>
-        As regiões/cidades atendidas em MG:
-      </Typography>
-      <TextField
-        label="Procure por sua cidade na lista"
-        variant="standard"
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <SearchIcon />
-            </InputAdornment>
-          ),
-        }}
-        onChange={(event) => handleFilter(event)}
-      />
+      <div className="regionsSearch">
+        <Typography variant='h6'>
+          As regiões/cidades atendidas em MG:
+        </Typography>
+        <TextField
+          label="Procure por sua cidade na lista"
+          variant="standard"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchIcon />
+              </InputAdornment>
+            ),
+          }}
+          onChange={(event) => handleFilter(event)}
+        />
+      </div>
 
       <div className="regions">
         <Grid container spacing={2}>
